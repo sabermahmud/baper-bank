@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/322237ef1b.js" crossorigin="anonymous"></script>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1 class="text-5xl text-violet-600 font-semibold text-center my-7">Your Account Summary</h1>
+    <div class="grid grid-cols-3 gap-6 w-3/4 mx-auto">
+        <div class="bg-green-300 p-5 mt-6 mx-3">
+            <h2 class=" text-2xl font-medium">Your Deposit</h2>
+            <h1>
+                tk<span id="display-dipo" class="text-6xl">00</span>
+            </h1>
+        </div>
+        <div class="bg-violet-300 p-5 mt-6 mx-3">
+            <h2 class=" text-2xl font-medium">Your Total Balance</h2>
+            <h1>
+                tk<span id="total-Balance" class="text-6xl">50000</span>
+            </h1>
+        </div>
+        <div class="bg-red-300 p-5 mt-6 mx-3">
+            <h2 class=" text-2xl font-medium">Your Withdraw</h2>
+            <h1>
+                tk<span id="withdraw-display" class="text-6xl">00</span>
+            </h1>
+        </div>
+
+    </div>
+
+    <!-- ***** deposit & withdraw ***** -->
+    <div class="grid grid-cols-2 gap-6 w-3/4 mx-auto">
+        <!-- deposit input -->
+        <div class="bg-emerald-300 p-5 mt-6 mx-3">
+            <h2 class=" text-2xl font-medium mb-8">Your Deposit</h2>
+            <input type="number" id="input-field" class="mb-2 p-1 w-full block">
+            <button id="deposit-btn" class="bg-violet-400 mt-2 px-5 py-2 ml-80 rounded-lg text-lg font-medium">Deposit</button>
+        </div>
+        <!-- withdraw input -->
+        <div class="bg-purple-400 p-5 mt-6 mx-3">
+            <h2 class=" text-2xl font-medium mb-8">Your Withdraw</h2>
+            <input type="number" id="withdraw-input" class="my-2 p-1 w-full block">
+            <button id="withdraw-btn" class="bg-red-300 mt-2 px-5 py-2 rounded-lg text-lg font-medium ml-80">Withdraw</button>
+        </div>
+    </div>
+
+    <!-- back Button -->
+    <button id="back-btn" class="bg-purple-400 py-3 rounded-lg text-lg font-medium w-1/5 mt-20 ml-48" ><i class="fa-solid fa-backward"></i> Go Back</button>
+
+    <script src="js/account.js"></script>
+</body>
+</html>
